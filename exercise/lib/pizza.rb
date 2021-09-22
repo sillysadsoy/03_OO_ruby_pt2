@@ -30,6 +30,10 @@ class Pizza
         self.all.find {|instance| instance.name == name_input}
     end
 
+    def self.remove_duplicates
+        @@all.uniq! {|instance| instance.name}
+    end 
+
 end
 
 p1 = Pizza.new(name: 'h', ingredients: 'h', desc: 'h')
